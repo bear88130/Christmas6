@@ -1,0 +1,113 @@
+<div class="container">
+  <h1>
+    我的配置
+  </h1>
+  <div class="h-45"></div>
+  <h3>個人資料</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-danger">
+        <th scope="col">Id</th>
+        <th scope="col">名稱</th>
+        <th scope="col">可用點數</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataGet.data">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.pointGet}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <form>
+    <div class="h-30"></div>
+    <h3>排行榜點數</h3>
+
+    <div class="form-row">
+      <div class="col text-right">
+        <button type="button h4" class="btn btn-outline-secondary">-</button>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="0" disabled>
+      </div>
+      <div class="col">
+        <button type="button h4" class="btn btn-outline-secondary">+</button>
+      </div>
+    </div>
+    <small class="text-muted">
+      本點數不適用 7 天鑑賞期，一旦點選就無法退還
+    </small>
+    <div class="h-30"></div>
+    <h3>解鎖項目</h3>
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 8rem;">
+          <img class="card-img-top" src="../../assets/馬達.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">馬達             <a href="#" class="badge badge-secondary">1</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 8rem;">
+          <img class="card-img-top" src="../../assets/凱威.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">凱威</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 8rem;">
+          <img class="card-img-top" src="../../assets/子陽.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">子陽</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 8rem;">
+          <img class="card-img-top" src="../../assets/仲祐.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">仲祐</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 8rem;">
+          <img class="card-img-top" src="../../assets/ZhiChi.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">ZhiChi</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+          <div class="card" style="width: 8rem;">
+            <img class="card-img-top" src="../../assets/班導.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">班導</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="../../assets/璧辰.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">璧辰</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="card" style="width: 8rem;">
+                <img class="card-img-top" src="../../assets/承訓.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">承訓</p>
+                </div>
+              </div>
+            </div>
+    </div>
+
+  </form>
+
+  <div class="h-45"></div>
+</div>

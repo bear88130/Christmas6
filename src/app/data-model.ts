@@ -9,6 +9,7 @@ export interface Description {
   content: string;
   pointNeed: string;
   ableId: string[];
+  photo: string;
 }
 
 export interface Setting {

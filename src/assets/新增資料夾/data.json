@@ -1,0 +1,19 @@
+{
+  "data": [{
+    "id": "1",
+    "name": "馬達",
+    "pointGet": "0",
+    "pointRank": "0"
+  }],
+  "description": [
+    {
+      "relationId":"1",
+      "content":"",
+      "pointNeed":"5",
+      "ableId":[
+        "1"
+      ]
+    }
+  ],
+  "leaderboard": []
+}

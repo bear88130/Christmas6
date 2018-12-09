@@ -8,18 +8,44 @@ import { DataServiceService } from '../data-service.service';
 })
 export class IndexComponent implements OnInit {
   constructor(private dataService: DataServiceService) {
-    this.dataGet$ = this.dataService.getMyData();
   }
 
-  dataGet$;
-  dataGet;
+  dataGet$ = this.dataService.getMyData();
+  dataGet = [];
+  dataPost$;
+  dataPost;
 
   ngOnInit() {
     this.dataGet$.subscribe(
       x => {
-        this.dataGet = x;
+        this.dataGet = x.data.map(f => f);
       }
     );
+  }
+
+  addOne() {
+    const content = {
+      data: [{
+        id: '1',
+        name: '馬達123',
+        pointGet: '0',
+        pointRank: '0'
+      }],
+      description: [
+        {
+          relationId: '1',
+          content: '',
+          pointNeed: '5',
+          ableId: [
+            '1'
+          ]
+        }
+      ],
+      leaderboard: []
+    };
+
+    this.dataPost$ = this.dataService.postMyData(JSON.stringify(content)).subscribe();
+
   }
 
 }

@@ -10,23 +10,30 @@
       <div class="card" style="width: 8rem;">
         <img class="card-img-top" [src]="item.photo" [alt]="item.name">
         <div class="card-body">
-            <h5 class="card-title">{{item.name}}</h5>
-            <label [for]="'pointLabel'+idx">點數</label>
-            <input type="number" class="form-control" [id]="'pointLabel' + idx" name="pointLabel" placeholder="0" [(ngModel)]="item.pointGet">
+          <h5 class="card-title">{{item.name}}</h5>
+          <label [for]="'pointLabel'+idx">點數</label>
+          <input type="number" class="form-control" [id]="'pointLabel' + idx" name="pointLabel" placeholder="0"
+            [(ngModel)]="item.pointGet">
         </div>
       </div>
     </div>
   </div>
   <div class="h-45"></div>
 
-  <button type="button" class="btn btn-primary btn-lg btn-block" (click)="rankAll()">開始排行-全部</button>
+  <!-- <button type="button" class="btn btn-primary btn-lg btn-block" (click)="rankAll()">開始排行-全部</button>
   <button type="button" class="btn btn-primary btn-lg btn-block" (click)="rankSingle()">開始排行-單個</button>
-  <button type="button" class="btn btn-primary btn-lg btn-block" (click)="rankClear()">重製</button>
-  <div class="h-45"></div>
+  <button type="button" class="btn btn-primary btn-lg btn-block" (click)="rankClear()">重製</button> -->
+  <!-- <div class="h-45"></div> -->
 
+  <!-- <h1>DATAGET</h1>
   {{dataGet|json}}
   <div class="h-45"></div>
+  <h1>DATARANK</h1>
   {{dataRank|json}}
+  <div class="h-45"></div>
+  <h1>DATAGIFT</h1>
+  {{dataGift|json}} -->
+  <h3>排行榜</h3>
   <table class="table">
     <thead>
       <tr>
@@ -42,31 +49,37 @@
           <img [src]="item.photo" [alt]="item.name" class="rankImg">
           <br>
           <p>{{item.name}}</p>
+          <span class="badge badge-pill badge-primary">{{item.compareName}}</span>
         </td>
-        <ng-container *ngIf="false; else elseTemplate">
+        <ng-container *ngIf="evx; else elseTemplate">
             <td class="text-center">
-                <img [src]="item.photo" [alt]="item.name" class="rankImg">
-                <br>
-                <p>{{item.name}}</p>
-            </td>
+                <p>{{item.pointGet}}</p>
+                <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-primary" (click)="selectAllRandom(item.name)">隨機抽籤</button>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      選擇人選
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <ng-container *ngFor="let itemDG of dataGift">
+                        <a class="dropdown-item" (click)="selectSingleRandom(item.name,itemDG.name)">{{itemDG.name}}</a>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+              </td>
         </ng-container>
         <ng-template #elseTemplate>
             <td class="text-center">
-            <p>{{item.pointGet}}</p>
-            <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
-                <button type="button" class="btn btn-primary">隨機抽籤</button>
-                <div class="btn-group" role="group" *ngIf="evx">
-                  <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    選擇人選
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                  </div>
+                <p>{{item.pointGet}}</p>
+                <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-primary" (click)="selectAllRandom(item.name)">隨機抽籤</button>
                 </div>
-              </div>
-            </td>
+              </td>
         </ng-template>
+
+
       </tr>
     </tbody>
   </table>

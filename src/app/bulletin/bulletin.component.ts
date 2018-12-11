@@ -13,6 +13,8 @@ export class BulletinComponent implements OnInit, OnDestroy {
   dataGet = [];
   dataAll = [];
   dataView = [];
+  dataGift = [];
+  viewGift = [];
 
   get dataRank() {
     const newData = this.dataGet.map(x => x);
@@ -33,6 +35,7 @@ export class BulletinComponent implements OnInit, OnDestroy {
       x => {
         this.dataGet = x.data.map(f => f);
         this.dataAll = x.data.map(f => f);
+        this.dataGift = x.data.map(f => f);
       }
     );
   }
@@ -59,13 +62,13 @@ export class BulletinComponent implements OnInit, OnDestroy {
   rankSingle() {
     // -----dataGet 做為剩餘的資料-----
     // 抽出一筆資料，這邊是淺拷貝
-    const oneData = this.dataGet.sort(x => {
+    const oneData = this.dataGift.sort(x => {
       return Math.random() > 0.5 ? -1 : 1;
     });
     // 將抽出的資料放到 dataView
-    this.dataView.push(oneData[0]);
-    // 比對 dataGet 資料刪除，避免抽到重複的
-    this.dataGet.splice(0, 1);
+    this.viewGift.push(oneData[0]);
+    // 比對 dataGift 資料刪除，避免抽到重複的
+    this.dataGift.splice(0, 1);
   }
 
   rankClear() {
@@ -79,5 +82,34 @@ export class BulletinComponent implements OnInit, OnDestroy {
   //   this.dataView.push(this.dataGet[index]);
   //   this.dataGet.splice(index, 1);
   // }
+
+  selectAllRandom(name: string) {
+    // -----dataGet 做為剩餘的資料-----
+    // 抽出一筆資料，這邊是淺拷貝
+    let oneData = this.dataGift.map(x => x);
+    const index = oneData.findIndex(x => x.name === name);
+    if (oneData.length !== 1) {
+      oneData.splice(index , 1);
+    }
+    oneData = oneData.sort(x => {
+      return Math.random() > 0.5 ? -1 : 1;
+    });
+    // 將抽出的資料放到 dataGet
+    const pushIndex = this.dataGet.findIndex(x => x.name === name);
+    this.dataGet[pushIndex].compareName = oneData[0].name;
+
+    // 刪除資料
+    const deleteIndex = this.dataGift.findIndex(x => x.name === oneData[0].name);
+    this.dataGift.splice(deleteIndex, 1);
+  }
+
+  selectSingleRandom(name: string, selectName: string) {
+    // 將抽出的資料放到 dataView
+    const pushIndex = this.dataGet.findIndex(x => x.name === name);
+    this.dataGet[pushIndex].compareName = selectName;
+    // 比對 dataGift 資料刪除，避免抽到重複的
+    const deleteIndex = this.dataGift.findIndex(x => x.name === selectName);
+    this.dataGift.splice(deleteIndex, 1);
+  }
 
 }

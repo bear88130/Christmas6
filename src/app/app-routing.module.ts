@@ -8,8 +8,8 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent },
   { path: 'adminX', component: AdminComponent },
   { path: 'bulletin', component: BulletinComponent },
-  { path: '**', component: IndexComponent },
-  { path: '', component: IndexComponent }
+  { path: '**', component: BulletinComponent },
+  { path: '', component: BulletinComponent }
 ];
 
 @NgModule({

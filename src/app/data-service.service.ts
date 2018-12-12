@@ -16,7 +16,7 @@ export class DataServiceService {
         'Content-Type':  'application/json',
       })
     };
-    return this.http.get<DataModel>('../assets/data.json', httpOptions);
+    return this.http.get<DataModel>('./assets/data.json', httpOptions);
   }
 
   postMyData(content) {

@@ -14,38 +14,32 @@ export class IndexComponent implements OnInit {
   dataGet = [];
   dataPost$;
   dataPost;
+  viewData = [];
 
   ngOnInit() {
+    this.initData();
+  }
+
+  initData() {
     this.dataGet$.subscribe(
       x => {
         this.dataGet = x.data.map(f => f);
       }
     );
-  }
-
-  addOne() {
-    const content = {
-      data: [{
-        id: '1',
-        name: '馬達123',
-        pointGet: '0',
-        pointRank: '0'
-      }],
-      description: [
-        {
-          relationId: '1',
-          content: '',
-          pointNeed: '5',
-          ableId: [
-            '1'
-          ]
-        }
-      ],
-      leaderboard: []
-    };
-
-    this.dataPost$ = this.dataService.postMyData(JSON.stringify(content)).subscribe();
 
   }
+
+  radom() {
+  this.initData();
+  this.viewData = this.dataGet.sort(x => {
+      return Math.random() > 0.5 ? -1 : 1;
+    }
+    );
+  }
+
+  clear() {
+    this.viewData.length = 0;
+  }
+
 
 }

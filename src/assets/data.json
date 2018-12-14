@@ -1,126 +1,134 @@
 {
   "data": [{
-    "id": "1",
-    "photo": "./assets/馬達.jpg",
-    "name": "馬達",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "2",
-    "photo": "./assets/Yu-ling.jpg",
-    "name": "Yu-ling",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "3",
-    "photo": "./assets/ZhiChi.jpg",
-    "name": "ZhiChi",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "4",
-    "photo": "./assets/子陽.jpg",
-    "name": "子陽",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "5",
-    "photo": "./assets/仲祐.jpg",
-    "name": "仲祐",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "6",
-    "photo": "./assets/江江.jpg",
-    "name": "江江",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "7",
-    "photo": "./assets/周周.jpg",
-    "name": "周周",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "8",
-    "photo": "./assets/忠霖.jpg",
-    "name": "忠霖",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "9",
-    "photo": "./assets/承訓.jpg",
-    "name": "承訓",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "10",
-    "photo": "./assets/俊維.jpg",
-    "name": "俊維",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "11",
-    "photo": "./assets/凱威.jpg",
-    "name": "凱威",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "12",
-    "photo": "./assets/喻嘉.jpg",
-    "name": "喻嘉",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "13",
-    "photo": "./assets/瑋庭.jpg",
-    "name": "瑋庭",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "14",
-    "photo": "./assets/靖方.jpg",
-    "name": "靖方",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "15",
-    "photo": "./assets/駿憲.jpg",
-    "name": "駿憲",
-    "pointGet": "0",
-    "pointRank": "0"
-  },
-  {
-    "id": "16",
-    "photo": "./assets/璧辰.jpg",
-    "name": "璧辰",
-    "pointGet": "0",
-    "pointRank": "0"
-  }
-],
-  "description": [
+      "id": "1",
+      "photo": "./assets/Yu-ling.jpg",
+      "name": "Yu-ling",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
     {
-      "relationId":"1",
-      "content":"",
-      "pointNeed":"5",
-      "ableId":[
-        "1"
-      ]
+      "id": "2",
+      "photo": "./assets/馬達.jpg",
+      "name": "馬達",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+
+    {
+      "id": "3",
+      "photo": "./assets/ZhiChi.jpg",
+      "name": "ZhiChi",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "4",
+      "photo": "./assets/子陽.jpg",
+      "name": "子陽",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "5",
+      "photo": "./assets/仲祐.jpg",
+      "name": "仲祐",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "6",
+      "photo": "./assets/江江.jpg",
+      "name": "江江",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+
+    {
+      "id": "7",
+      "photo": "./assets/忠霖.jpg",
+      "name": "忠霖",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "8",
+      "photo": "./assets/承訓.jpg",
+      "name": "承訓",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "9",
+      "photo": "./assets/瑋庭.jpg",
+      "name": "瑋庭",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "10",
+      "photo": "./assets/俊維.jpg",
+      "name": "俊維",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "11",
+      "photo": "./assets/凱威.jpg",
+      "name": "凱威",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "12",
+      "photo": "./assets/周周.jpg",
+      "name": "周周",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "13",
+      "photo": "./assets/班導.jpg",
+      "name": "班導",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "14",
+      "photo": "./assets/喻嘉.jpg",
+      "name": "喻嘉",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+
+    {
+      "id": "15",
+      "photo": "./assets/靖方.jpg",
+      "name": "靖方",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "16",
+      "photo": "./assets/駿憲.jpg",
+      "name": "駿憲",
+      "pointGet": "0",
+      "pointRank": "0"
+    },
+    {
+      "id": "17",
+      "photo": "./assets/璧辰.jpg",
+      "name": "璧辰",
+      "pointGet": "0",
+      "pointRank": "0"
     }
   ],
+  "description": [{
+    "relationId": "1",
+    "content": "",
+    "pointNeed": "5",
+    "ableId": [
+      "1"
+    ]
+  }],
   "leaderboard": []
 }
